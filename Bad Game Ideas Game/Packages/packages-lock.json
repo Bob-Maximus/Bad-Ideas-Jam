@@ -1,13 +1,5 @@
 {
   "dependencies": {
-<<<<<<< HEAD:Bad Ideas Jam/Packages/packages-lock.json
-    "com.unity.2d.sprite": {
-      "version": "1.0.0",
-      "depth": 0,
-      "source": "builtin",
-      "dependencies": {}
-    },
-=======
     "com.unity.2d.animation": {
       "version": "10.1.1",
       "depth": 1,
@@ -65,7 +57,7 @@
     },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
-      "depth": 1,
+      "depth": 0,
       "source": "builtin",
       "dependencies": {}
     },
@@ -111,7 +103,6 @@
       },
       "url": "https://packages.unity.com"
     },
->>>>>>> 03f501136e6ad9d82eacecafd41ef996c974c052:Bad Game Ideas Game/Packages/packages-lock.json
     "com.unity.collab-proxy": {
       "version": "2.11.4",
       "depth": 0,
@@ -161,11 +152,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.visualstudio": {
-      "version": "2.0.22",
+      "version": "2.0.27",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.test-framework": "1.1.9"
+        "com.unity.test-framework": "1.1.33"
       },
       "url": "https://packages.unity.com"
     },

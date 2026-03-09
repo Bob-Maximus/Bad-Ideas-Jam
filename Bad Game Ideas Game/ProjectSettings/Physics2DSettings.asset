@@ -3,11 +3,7 @@
 --- !u!19 &1
 Physics2DSettings:
   m_ObjectHideFlags: 0
-<<<<<<< HEAD:Bad Ideas Jam/ProjectSettings/Physics2DSettings.asset
   serializedVersion: 6
-=======
-  serializedVersion: 5
->>>>>>> 03f501136e6ad9d82eacecafd41ef996c974c052:Bad Game Ideas Game/ProjectSettings/Physics2DSettings.asset
   m_Gravity: {x: 0, y: -9.81}
   m_DefaultMaterial: {fileID: 0}
   m_VelocityIterations: 8
@@ -43,7 +39,6 @@ Physics2DSettings:
     m_IslandSolverBodiesPerJob: 50
     m_IslandSolverContactsPerJob: 50
   m_SimulationMode: 0
-<<<<<<< HEAD:Bad Ideas Jam/ProjectSettings/Physics2DSettings.asset
   m_SimulationLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -51,8 +46,6 @@ Physics2DSettings:
   m_MinSubStepFPS: 30
   m_UseSubStepping: 0
   m_UseSubStepContacts: 0
-=======
->>>>>>> 03f501136e6ad9d82eacecafd41ef996c974c052:Bad Game Ideas Game/ProjectSettings/Physics2DSettings.asset
   m_QueriesHitTriggers: 1
   m_QueriesStartInColliders: 1
   m_CallbacksOnDisable: 1
