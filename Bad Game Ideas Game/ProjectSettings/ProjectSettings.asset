@@ -160,7 +160,11 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   androidMinAspectRatio: 1
   applicationIdentifier:
+<<<<<<< HEAD:Bad Ideas Jam/ProjectSettings/ProjectSettings.asset
+    Standalone: com.DefaultCompany.Bad-Ideas-Jam
+=======
     Standalone: com.DefaultCompany.2DProject
+>>>>>>> 03f501136e6ad9d82eacecafd41ef996c974c052:Bad Game Ideas Game/ProjectSettings/ProjectSettings.asset
   buildNumber:
     Bratwurst: 0
     Standalone: 0

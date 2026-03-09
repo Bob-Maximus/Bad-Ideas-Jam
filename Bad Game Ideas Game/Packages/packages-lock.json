@@ -1,5 +1,13 @@
 {
   "dependencies": {
+<<<<<<< HEAD:Bad Ideas Jam/Packages/packages-lock.json
+    "com.unity.2d.sprite": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+=======
     "com.unity.2d.animation": {
       "version": "10.1.1",
       "depth": 1,
@@ -103,6 +111,7 @@
       },
       "url": "https://packages.unity.com"
     },
+>>>>>>> 03f501136e6ad9d82eacecafd41ef996c974c052:Bad Game Ideas Game/Packages/packages-lock.json
     "com.unity.collab-proxy": {
       "version": "2.11.4",
       "depth": 0,
