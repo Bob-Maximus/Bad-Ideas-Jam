@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
-    
 
     [SerializeField] public bool player1;
 
@@ -84,7 +83,7 @@ public class PlayerController : MonoBehaviour
     {
         rb.velocityX = Mathf.Lerp(rb.velocityX, speed, Time.deltaTime*15);
 
-        if (rb.velocityX > 0.1)
+        if (speed > 0)
         {
             sprite.flipX = false;
         } else
