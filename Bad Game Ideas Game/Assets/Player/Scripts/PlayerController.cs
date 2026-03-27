@@ -68,7 +68,6 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-
         
 
     public void Control2()
@@ -94,10 +93,11 @@ public class PlayerController : MonoBehaviour
     {
         rb.velocityX = Mathf.Lerp(rb.velocityX, speed, Time.deltaTime*15);
 
-        if (speed > 0)
+        if (speed > 0.1)
         {
             sprite.flipX = false;
-        } else
+        } 
+        else if (speed < -0.1)
         {
             sprite.flipX = true;
         }
