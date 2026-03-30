@@ -8,6 +8,7 @@ public class playerCamera : MonoBehaviour
     public float smoothTime = 0.15f;
     public float zoomConstant;
     private Vector3 velocity = Vector3.zero;
+    public float minZoom;
 
     void LateUpdate()
     {
