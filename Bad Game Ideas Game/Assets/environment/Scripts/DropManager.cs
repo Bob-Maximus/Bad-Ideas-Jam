@@ -8,6 +8,7 @@ public class DropManager : MonoBehaviour
     [SerializeField] public Vector2 range;
     [SerializeField] public float yPos;
     [SerializeField] public float timeBetweenSpawns;
+    [SerializeField] public Transform dropPos;
     private float timer;
 
     // Update is called once per frame
@@ -23,10 +24,10 @@ public class DropManager : MonoBehaviour
 
     public void Spawn()
     {
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.Space))
         {
             GameObject spawnable = Instantiate(droppables[Random.Range(0, droppables.Capacity)]);
-            spawnable.transform.position = new Vector2(Random.Range(range.x, range.y), yPos);
+            spawnable.transform.position = dropPos.transform.position;
         }
       
     }
