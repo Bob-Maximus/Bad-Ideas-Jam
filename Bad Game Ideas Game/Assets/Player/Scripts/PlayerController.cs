@@ -56,8 +56,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             Jump(jumpHeight);
-        }
-        
+        } 
+
         if (Input.GetKey(KeyCode.A)|| Input.GetKey(KeyCode.D))
         {
             _animator.SetBool("isrunning", true);
@@ -68,7 +68,6 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-
         
 
     public void Control2()
@@ -87,17 +86,25 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.UpArrow))
         {
             Jump(jumpHeight);
+        } else if (Input.GetKey(KeyCode.DownArrow))
+        {
+            Jump(-jumpHeight);
+        } else
+        {
+            Jump(0);
         }
+        
     }
 
     public void Move(float speed)
     {
         rb.velocityX = Mathf.Lerp(rb.velocityX, speed, Time.deltaTime*15);
 
-        if (speed > 0)
+        if (speed > 0.1)
         {
             sprite.flipX = false;
-        } else
+        } 
+        else if (speed < -0.1)
         {
             sprite.flipX = true;
         }
@@ -105,11 +112,9 @@ public class PlayerController : MonoBehaviour
 
     public void Jump(float jumpHeight)
     {
-        if (groundcheck.grounded)
+        if (groundcheck.grounded || !player1)
         {
             rb.velocityY = jumpHeight;
-
-            
         }
     }
     
