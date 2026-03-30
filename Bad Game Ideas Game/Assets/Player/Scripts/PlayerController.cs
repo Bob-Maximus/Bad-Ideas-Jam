@@ -72,25 +72,32 @@ public class PlayerController : MonoBehaviour
 
     public void Control2()
     {
+        _animator.SetBool("isrunning", true);
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             Move(-speed);
+            _animator.SetBool("isrunning", true);
         } else if (Input.GetKey(KeyCode.RightArrow))
         {
             Move(speed);
+            _animator.SetBool("isrunning", true);
         } else
         {
             Move(0);
+            _animator.SetBool("isrunning", false);
         }
         
         if (Input.GetKey(KeyCode.UpArrow))
         {
             Jump(jumpHeight);
+            _animator.SetBool("isrunning", true);
         } else if (Input.GetKey(KeyCode.DownArrow))
         {
             Jump(-jumpHeight);
+            _animator.SetBool("isrunning", true);
         } else
         {
+            _animator.SetBool("isrunning", false);
             Jump(0);
         }
         
