@@ -11,5 +11,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Player Controller Scene.unity
     guid: a7b47bd35531a6a13891a015b3bcec8f
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: 7d6ecdd2a0e05e89699ed04da907b58c
+  - enabled: 1
+    path: Assets/Scenes/Lose.unity
+    guid: 8c8716e94431bed5fa03ba9273e4f551
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

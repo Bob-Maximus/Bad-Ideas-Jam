@@ -29,6 +29,5 @@ public class DropManager : MonoBehaviour
             GameObject spawnable = Instantiate(droppables[Random.Range(0, droppables.Capacity)]);
             spawnable.transform.position = dropPos.transform.position;
         }
-      
     }
 }
