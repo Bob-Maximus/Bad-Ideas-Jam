@@ -7,6 +7,9 @@ public class Groundcheck : MonoBehaviour
 {
     public bool grounded;
     int groundedTimer;
+    public GameObject landEffect;
+
+    public AudioClip sound;
 
     void Update()
     {
@@ -24,8 +27,15 @@ public class Groundcheck : MonoBehaviour
     private void OnTriggerStay2D(Collider2D col)
     {
 
-        if (col.tag == "Ground" || col.tag == "Player"){
         groundedTimer = 0;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.tag == "Ground")
+        {
+            GetComponent<AudioSource>().PlayOneShot(sound);
+            Instantiate(landEffect, gameObject.transform);
+            transform.DetachChildren();
         }
     }
 }

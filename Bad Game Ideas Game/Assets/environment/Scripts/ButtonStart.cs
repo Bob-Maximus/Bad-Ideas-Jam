@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class ButtonStart : MonoBehaviour
 {
-    
+    public string scene;
     public void Button_StartGame(){
 
 
         Debug.Log("Start button pressed");
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(scene);
     }
 
     public void Button_ConfirmQuit ()

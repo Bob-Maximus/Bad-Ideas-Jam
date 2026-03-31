@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class playerCamera : MonoBehaviour
@@ -8,6 +9,10 @@ public class playerCamera : MonoBehaviour
     public float smoothTime = 0.15f;
     public float zoomConstant;
     private Vector3 velocity = Vector3.zero;
+    private float velocity1 = 0;
+    public float minZoom;
+    float zoom = 0;
+
 
     void LateUpdate()
     {
@@ -17,8 +22,8 @@ public class playerCamera : MonoBehaviour
             Vector3 targetPosition = midpoint + offset;
             transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
 
-            float zoom = Vector2.Distance(player1.position, player2.position)*zoomConstant;
-            if (offset.z < zoom)
+            zoom = Mathf.SmoothDamp(zoom, Mathf.Sqrt(Vector2.Distance(player1.position, player2.position)*zoomConstant), ref velocity1, smoothTime);
+            if (minZoom < zoom)
             {
                 Camera.main.orthographicSize = zoom;
             }

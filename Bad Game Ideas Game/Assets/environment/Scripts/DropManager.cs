@@ -24,11 +24,10 @@ public class DropManager : MonoBehaviour
 
     public void Spawn()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.RightShift))
         {
             GameObject spawnable = Instantiate(droppables[Random.Range(0, droppables.Capacity)]);
             spawnable.transform.position = dropPos.transform.position;
         }
-      
     }
 }

@@ -71,22 +71,7 @@ public class PlayerController : MonoBehaviour
         
 
     public void Control2()
-    {
-        _animator.SetBool("isrunning", true);
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            Move(-speed);
-            _animator.SetBool("isrunning", true);
-        } else if (Input.GetKey(KeyCode.RightArrow))
-        {
-            Move(speed);
-            _animator.SetBool("isrunning", true);
-        } else
-        {
-            Move(0);
-            _animator.SetBool("isrunning", false);
-        }
-        
+    {        
         if (Input.GetKey(KeyCode.UpArrow))
         {
             Jump(jumpHeight);
@@ -101,6 +86,20 @@ public class PlayerController : MonoBehaviour
             Jump(0);
         }
         
+        _animator.SetBool("isrunning", true);
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            Move(-speed);
+            _animator.SetBool("isrunning", true);
+        } else if (Input.GetKey(KeyCode.RightArrow))
+        {
+            Move(speed);
+            _animator.SetBool("isrunning", true);
+        } else
+        {
+            Move(0);
+            _animator.SetBool("isrunning", false);
+        }
     }
 
     public void Move(float speed)
@@ -119,7 +118,7 @@ public class PlayerController : MonoBehaviour
 
     public void Jump(float jumpHeight)
     {
-        if (groundcheck.grounded || !player1)
+        if (!player1 || groundcheck.grounded)
         {
             rb.velocityY = jumpHeight;
         }
