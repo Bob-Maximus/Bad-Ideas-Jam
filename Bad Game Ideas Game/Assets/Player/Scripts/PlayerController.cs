@@ -118,7 +118,7 @@ public class PlayerController : MonoBehaviour
 
     public void Jump(float jumpHeight)
     {
-        if (groundcheck.grounded || !player1)
+        if (!player1 || groundcheck.grounded)
         {
             rb.velocityY = jumpHeight;
         }
